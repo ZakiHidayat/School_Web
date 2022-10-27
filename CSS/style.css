@@ -135,17 +135,17 @@ nav {
 }
 
 .navbar-button {
-    background-color: var(--color-primary);
-    color: var(--color-bg2);
+    color: var(--color-primary);
     border-radius: 1.2rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-primary);
     padding: 0.8rem 1.4rem;
     transition: var(--o-transition);
 }
 
 .navbar-button:hover {
-    color: black;
-    background: transparent;
+    background-color: var(--color-primary);
+    color: white;
+    background: var(--color-primary);
     border-color: var(--color-primary);
 }
 
@@ -368,6 +368,8 @@ aside{
 
 .aboutus_img{
     border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 .info h3{
@@ -379,6 +381,53 @@ aside{
     margin-top: 1rem;
 }
 /* ======== end about us ======== */
+
+/* ======== footer ======== */
+footer{
+    background-color: var(--color-bg1);
+    padding: 20px;
+    text-align: center;
+}
+/* ======== end footer ======== */
+
+/* ======== fab ======== */
+
+  .fab {
+    position: fixed;
+    display: flex;
+    bottom: 3rem;
+    right: 3rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow: 0px 5px 20px #81a4f1;
+    transition: all 0.3s ease;
+    z-index: 1;
+    border-bottom-right-radius: 6px;
+    border: 1px solid #0c50a7;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .floating{
+    font-size: 2rem;
+    color: var(--color-bg1);
+  }
+
+  .fab p{
+    color: var(--color-bg1);
+  }
+  
+  .fab:hover {
+    transform: scale(1.1);
+    background: #2c87e8;
+    box-shadow: 0px 5px 20px 5px #81a4f1;
+    border-radius: 1.5rem;
+  }
+
+/* ======== endfab ======== */
 
 
 /* ^^^^^^^^ MEDIA QUERY ^^^^^^^^ */
@@ -444,6 +493,28 @@ aside{
     .whyus_list{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .aside{
+        padding: 0 50px;
+    }
+
+    .info h3{
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+    }
+
+    .info p{
+        font-size: 13px;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .uil{
+        background-color: var(--color-lightblue);
+        color: var(--color-primary);
+        font-size: small;
+        margin-right: 0.3rem;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -463,6 +534,14 @@ aside{
 
     .header_title{
         margin-bottom: 20px;
+    }
+
+    .aboutus_card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutus_right{
+        
     }
 }
 
